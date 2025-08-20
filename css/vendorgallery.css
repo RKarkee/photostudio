@@ -1,0 +1,422 @@
+ :root {
+            --primary-gold: #D4AF37;
+            --deep-charcoal: #2C2C2C;
+            --soft-cream: #F8F6F0;
+            --warm-gray: #6B6B6B;
+            --accent-teal: #4A9B8E;
+            --light-shadow: rgba(0, 0, 0, 0.1);
+            --dark-shadow: rgba(0, 0, 0, 0.3);
+            --gradient-primary: linear-gradient(45deg, var(--primary-gold), #E6C547);
+           --gradient-dark: linear-gradient(135deg, darkslategray 0%, #041953 100%);
+        }
+
+        /* Global Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--soft-cream);
+            color: var(--deep-charcoal);
+            line-height: 1.6;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background: var(--gradient-dark);
+            box-shadow: 0 4px 6px var(--light-shadow);
+            padding: 1rem 0;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: var(--primary-gold) !important;
+            text-shadow: 2px 2px 4px var(--light-shadow);
+            margin-right: 2rem;
+        }
+        .nav-item{
+            align-content: center;
+        }
+        .navbar-nav .nav-link {
+            color: var(--soft-cream) !important;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: var(--primary-gold) !important;
+        }
+ /* Navbar collapsed menu alignment */
+        @media (max-width: 991.98px) {
+            .navbar-nav {
+                text-align: right;
+            }
+            
+            .navbar-nav .nav-item {
+                text-align: right;
+            }
+        }
+
+         /* Search Bar - Desktop (visible only on lg and up) */
+        .search-container {
+            position: relative;
+            width: 350px;
+            display: none;
+        }
+        @media (min-width: 992px) {
+            .search-container {
+                display: flex !important;
+            }
+        }
+        .search-container .form-control {
+            border-radius: 25px;
+            border: 2px solid var(--primary-gold);
+            padding: 10px 50px 10px 20px;
+            background-color: var(--soft-cream);
+            transition: all 0.3s ease;
+        }
+
+       
+
+        .search-container .form-control:focus {
+            box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.25);
+            border-color: var(--primary-gold);
+        }
+
+        .search-container .btn {
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 50%;
+            background-color: var(--primary-gold);
+            border: none;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .search-container .btn:hover {
+            background-color: #E6C547;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        /* Mobile Search Bar */
+        .mobile-search {
+            display: none;
+            margin: 2rem auto;
+            max-width: 400px;
+        }
+
+      /* Hero Section - Full Width Background */
+        .hero-section {
+            background: linear-gradient(rgba(44, 44, 44, 0.5), rgba(44, 44, 44, 0.5)),
+                        url('https://t3.ftcdn.net/jpg/10/63/01/28/360_F_1063012848_DA5uysTYJEB8nmMqWuaIwZ25oRzxIKA6.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+            margin-bottom: 3rem;
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+        }
+
+        .hero-content {
+            background: transparent;
+            padding: 3rem;
+            border-radius: 20px;
+            /* backdrop-filter: blur(10px); */
+            max-width: 800px;
+            margin: 0 auto;
+            color: var(--primary-gold);
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 300;
+            text-shadow: 3px 3px 6px var(--dark-shadow);
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            margin-bottom: 0;
+        }
+
+        /* Filter Section */
+        .filter-section {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px var(--light-shadow);
+            margin-bottom: 3rem;
+        }
+
+        .filter-section h5 {
+            color: var(--deep-charcoal);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .filter-btn {
+            padding: 8px 20px;
+            border-radius: 25px;
+            border: 2px solid var(--accent-teal);
+            background: transparent;
+            color: var(--accent-teal);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--accent-teal);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .filter-btn.active.primary {
+            background: var(--gradient-primary);
+            border-color: var(--primary-gold);
+            color: var(--deep-charcoal);
+        }
+
+        /* Portfolio Cards */
+        .portfolio-item {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: none;
+            box-shadow: 0 8px 25px var(--light-shadow);
+            height: 100%;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .portfolio-item .card-img-top {
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-item:hover .card-img-top {
+            transform: scale(1.05);
+        }
+
+        .portfolio-item .card-body {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .portfolio-item .card-title {
+            color: var(--deep-charcoal);
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .portfolio-item .photographer-name {
+            color: var(--accent-teal);
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .portfolio-item .card-text {
+            flex-grow: 1;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Badge Styles */
+        .category-badge {
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-wedding { background: var(--primary-gold); color: var(--deep-charcoal); }
+        .badge-event { background: var(--accent-teal); color: white; }
+        .badge-product { background: #FFA500; color: var(--deep-charcoal); }
+        .badge-portrait { background: #17a2b8; color: white; }
+
+        /* Rating */
+        .rating {
+            color: var(--primary-gold);
+            font-size: 0.9rem;
+        }
+
+        /* Price Display */
+        .price-display {
+            color: var(--primary-gold);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        /* Button Styles */
+        .btn-primary-custom {
+            background: var(--gradient-primary);
+            border: none;
+            color: var(--deep-charcoal);
+            font-weight: 600;
+            padding: 10px 25px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+        }
+
+        .btn-primary-custom:hover {
+            background: linear-gradient(45deg, #E6C547, var(--primary-gold));
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+            color: var(--deep-charcoal);
+        }
+
+        .btn-outline-custom {
+            border: 2px solid var(--accent-teal);
+            color: var(--accent-teal);
+            background: transparent;
+            font-weight: 600;
+            padding: 15px 40px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-outline-custom:hover {
+            background: var(--accent-teal);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(74, 155, 142, 0.3);
+        }
+
+        /* Load More Section */
+        .load-more-section {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            box-shadow: 0 10px 30px var(--light-shadow);
+            margin-bottom: 3rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--gradient-dark);
+            color: var(--soft-cream);
+            padding: 3rem 0 2rem;
+            margin-top: 5rem;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 0;
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 991px) {
+            .search-container {
+                display: none !important;
+            }
+            
+            .mobile-search {
+                display: block !important;
+            }
+            
+            .filter-buttons {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar-brand {
+                font-size: 1.2rem;
+                margin-right: 1rem;
+            }
+            
+            .page-header {
+                padding: 3rem 0 1.5rem;
+            }
+            
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .filter-section {
+                padding: 1.5rem;
+                text-align: center;
+            }
+            
+            .portfolio-item .card-body {
+                padding: 1.5rem;
+            }
+            
+            .load-more-section {
+                padding: 2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .filter-buttons {
+                gap: 0.3rem;
+            }
+            
+            .filter-btn {
+                padding: 6px 15px;
+                font-size: 0.8rem;
+            }
+            
+            .mobile-search {
+                max-width: 300px;
+            }
+        }
+
+        /* Animation for filtering */
+        .portfolio-item {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }

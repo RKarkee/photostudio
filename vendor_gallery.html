@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browse Studios - TimelessFrames</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/vendorgallery.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📸</text></svg>"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"> 📸 TimelessFrames </a>
+
+        <!-- Desktop Search Bar -->
+        <div class="search-container d-none d-lg-block">
+          <input
+            type="search"
+            class="form-control"
+            placeholder="Search photographers, styles..."
+          />
+          <button type="button" class="btn">🔍</button>
+        </div>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="vendor_gallery.html"
+                >Browse Studios</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="vendor_management.html"
+                >Join as Photographer</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+  <section class="hero-section">
+        <!-- <div class="container"> -->
+            <div class="hero-content">
+        <h1>Photography Portfolio Gallery</h1>
+        <p>
+         Explore outstanding photography from our carefully chosen community of photographers
+        </p>
+
+      
+      </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="container">
+      <div class="filter-section">
+        <div class="row align-items-center">
+          <div class="col-md-4">
+            <h5>Filter by Category</h5>
+          </div>
+          <div class="col-md-8">
+            <div class="filter-buttons justify-content-md-end">
+              <button class="filter-btn active primary" data-filter="all">
+                All
+              </button>
+              <button class="filter-btn" data-filter="wedding">Wedding</button>
+              <button class="filter-btn" data-filter="event">Event</button>
+              <button class="filter-btn" data-filter="portrait">
+                Portrait
+              </button>
+              <button class="filter-btn" data-filter="product">Product</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="container">
+      <div class="row g-4" id="portfolioGrid">
+        <!-- Portfolio Item 1 -->
+        <div class="col-md-6 col-lg-4" data-category="wedding">
+          <div class="card portfolio-item">
+            <img
+              src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+              class="card-img-top"
+              alt="Sunset Wedding Ceremony"
+            />
+            <div class="card-body">
+              <div
+                class="d-flex justify-content-between align-items-start mb-2"
+              >
+                <span class="category-badge badge-wedding">Wedding</span>
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+              </div>
+              <h5 class="card-title">Sunset Wedding Ceremony</h5>
+              <p class="photographer-name">by Sarita Pandey </p>
+              <p class="card-text">
+                Golden hour wedding photography capturing the intimate moments
+                of a coastal ceremony. The warm lighting creates a romantic
+                atmosphere that perfectly complements the couple's special day.
+              </p>
+              <div
+                class="d-flex justify-content-between align-items-center mt-auto"
+              >
+                <span class="price-display">$200/session</span>
+                <a
+                  href="item_details.html?portfolio=sunset-wedding"
+                  class="btn btn-primary-custom"
+                  >Book Now</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 2 -->
+        <div class="col-md-6 col-lg-4" data-category="event">
+          <div class="card portfolio-item">
+            <img
+              src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+              class="card-img-top"
+              alt="Corporate Conference Photography"
+            />
+            <div class="card-body">
+              <div
+                class="d-flex justify-content-between align-items-start mb-2"
+              >
+                <span class="category-badge badge-event">Event</span>
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+              </div>
+              <h5 class="card-title">Corporate Conference</h5>
+              <p class="photographer-name">by Marcus Johnson</p>
+              <p class="card-text">
+                Professional event coverage with dynamic angles and perfect
+                timing to capture the energy and engagement of business
+                presentations and networking.
+              </p>
+              <div
+                class="d-flex justify-content-between align-items-center mt-auto"
+              >
+                <span class="price-display">$150/session</span>
+                <a
+                  href="item_details.html?portfolio=corporate-conference"
+                  class="btn btn-primary-custom"
+                  >Book Now</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 3 -->
+        <div class="col-md-6 col-lg-4" data-category="product">
+          <div class="card portfolio-item">
+            <img
+              src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+              class="card-img-top"
+              alt="Luxury Product Showcase"
+            />
+            <div class="card-body">
+              <div
+                class="d-flex justify-content-between align-items-start mb-2"
+              >
+                <span class="category-badge badge-product">Product</span>
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+              </div>
+              <h5 class="card-title">Luxury Product Showcase</h5>
+              <p class="photographer-name">by Elena Rodriguez</p>
+              <p class="card-text">
+                Sophisticated product photography with meticulous attention to
+                lighting and composition, designed to elevate brand perception
+                and drive engagement.
+              </p>
+              <div
+                class="d-flex justify-content-between align-items-center mt-auto"
+              >
+                <span class="price-display">$250/session</span>
+                <a
+                  href="item_details.html?portfolio=luxury-product"
+                  class="btn btn-primary-custom"
+                  >Book Now</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 4 -->
+        <div class="col-md-6 col-lg-4" data-category="portrait">
+          <div class="card portfolio-item">
+            <img
+              src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+              class="card-img-top"
+              alt="Artistic Portrait Session"
+            />
+            <div class="card-body">
+              <div
+                class="d-flex justify-content-between align-items-start mb-2"
+              >
+                <span class="category-badge badge-portrait">Portrait</span>
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+              </div>
+              <h5 class="card-title">Artistic Portrait Session</h5>
+              <p class="photographer-name">by James Thompson</p>
+              <p class="card-text">
+                Fine art portraiture that goes beyond traditional headshots,
+                creating compelling visual narratives that capture personality
+                and character depth.
+              </p>
+              <div
+                class="d-flex justify-content-between align-items-center mt-auto"
+              >
+                <span class="price-display">$300/session</span>
+                <a
+                  href="item_details.html?portfolio=artistic-portrait"
+                  class="btn btn-primary-custom"
+                  >Book Now</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 5 -->
+        <div class="col-md-6 col-lg-4" data-category="wedding">
+          <div class="card portfolio-item">
+            <img
+              src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+              class="card-img-top"
+              alt="Traditional Indian Wedding"
+            />
+            <div class="card-body">
+              <div
+                class="d-flex justify-content-between align-items-start mb-2"
+              >
+                <span class="category-badge badge-wedding">Wedding</span>
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+              </div>
+              <h5 class="card-title">Traditional Indian Wedding</h5>
+              <p class="photographer-name">by Aisha Patel</p>
+              <p class="card-text">
+                Cultural celebration photography with deep understanding of
+                traditions, rituals, and family dynamics unique to South Asian
+                ceremonies.
+              </p>
+              <div
+                class="d-flex justify-content-between align-items-center mt-auto"
+              >
+                <span class="price-display">$220/session</span>
+                <a
+                  href="item_details.html?portfolio=indian-wedding"
+                  class="btn btn-primary-custom"
+                  >Book Now</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 6 -->
+        <div class="col-md-6 col-lg-4" data-category="portrait">
+          <div class="card portfolio-item">
+            <img
+              src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+              class="card-img-top"
+              alt="Nature Lifestyle Photography"
+            />
+            <div class="card-body">
+              <div
+                class="d-flex justify-content-between align-items-start mb-2"
+              >
+                <span class="category-badge badge-portrait">Portrait</span>
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+              </div>
+              <h5 class="card-title">Nature Lifestyle Session</h5>
+              <p class="photographer-name">by David Kim</p>
+              <p class="card-text">
+                Outdoor portrait sessions that blend natural beauty with
+                authentic human moments, creating images that feel both
+                spontaneous and perfectly composed.
+              </p>
+              <div
+                class="d-flex justify-content-between align-items-center mt-auto"
+              >
+                <span class="price-display">$180/session</span>
+                <a
+                  href="item_details.html?portfolio=nature-lifestyle"
+                  class="btn btn-primary-custom"
+                  >Book Now</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 7 -->
+        <div class="col-md-6 col-lg-4" data-category="product">
+          <div class="card portfolio-item">
+            <img
+              src="https://images.unsplash.com/photo-1519167758481-83f29c8dee15?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+              class="card-img-top"
+              alt="Fashion Product Photography"
+            />
+            <div class="card-body">
+              <div
+                class="d-flex justify-content-between align-items-start mb-2"
+              >
+                <span class="category-badge badge-product">Product</span>
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+              </div>
+              <h5 class="card-title">Fashion & Accessories</h5>
+              <p class="photographer-name">by Elena Rodriguez</p>
+              <p class="card-text">
+                High-end fashion photography with a modern aesthetic, perfect
+                for e-commerce, lookbooks, and brand campaigns that demand
+                visual excellence.
+              </p>
+              <div
+                class="d-flex justify-content-between align-items-center mt-auto"
+              >
+                <span class="price-display">$280/session</span>
+                <a
+                  href="item_details.html?portfolio=fashion-accessories"
+                  class="btn btn-primary-custom"
+                  >Book Now</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 8 -->
+        <div class="col-md-6 col-lg-4" data-category="event">
+          <div class="card portfolio-item">
+            <img
+              src="https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+              class="card-img-top"
+              alt="Tech Conference Event"
+            />
+            <div class="card-body">
+              <div
+                class="d-flex justify-content-between align-items-start mb-2"
+              >
+                <span class="category-badge badge-event">Event</span>
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+              </div>
+              <h5 class="card-title">Tech Innovation Summit</h5>
+              <p class="photographer-name">by Marcus Johnson</p>
+              <p class="card-text">
+                Technology event photography capturing keynote presentations,
+                demonstrations, and networking moments with professional
+                precision and creative flair.
+              </p>
+              <div
+                class="d-flex justify-content-between align-items-center mt-auto"
+              >
+                <span class="price-display">$160/session</span>
+                <a
+                  href="item_details.html?portfolio=tech-summit"
+                  class="btn btn-primary-custom"
+                  >Book Now</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 9 -->
+        <div class="col-md-6 col-lg-4" data-category="wedding">
+          <div class="card portfolio-item">
+            <img
+              src="https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+              class="card-img-top"
+              alt="Vintage Wedding Style"
+            />
+            <div class="card-body">
+              <div
+                class="d-flex justify-content-between align-items-start mb-2"
+              >
+                <span class="category-badge badge-wedding">Wedding</span>
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+              </div>
+              <h5 class="card-title">Vintage Romance Wedding</h5>
+              <p class="photographer-name">by Sarah Chen</p>
+              <p class="card-text">
+                Timeless wedding photography with a vintage aesthetic, capturing
+                classic romantic moments with soft lighting and elegant
+                composition.
+              </p>
+              <div
+                class="d-flex justify-content-between align-items-center mt-auto"
+              >
+                <span class="price-display">$240/session</span>
+                <a
+                  href="item_details.html?portfolio=vintage-wedding"
+                  class="btn btn-primary-custom"
+                  >Book Now</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Load More Section -->
+    <section class="container">
+      <div class="load-more-section">
+        <h4 class="mb-3 text-deep-charcoal">Discover More Amazing Work</h4>
+        <p class="text-muted mb-4">
+          Load additional portfolio items from our talented photographer
+          community
+        </p>
+        <button class="btn btn-outline-custom" id="loadMoreBtn">
+          Load More Portfolios
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>
+          &copy; 2024 TimelessFrames. Blending creativity with professionalism, crafted with passion for those who truly love photography.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

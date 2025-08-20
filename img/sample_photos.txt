@@ -1,0 +1,41 @@
+Photography Studio Booking Platform - Sample Images
+
+This folder contains placeholder images used throughout the TimelessFrames platform.
+
+In a real-world implementation, this folder would contain:
+
+📸 FEATURED PHOTOGRAPHER IMAGES:
+- sarah_chen_portrait.jpg (150x150px profile photo)
+- marcus_johnson_portrait.jpg (150x150px profile photo)
+- elena_rodriguez_portrait.jpg (150x150px profile photo)
+- david_kim_portrait.jpg (150x150px profile photo)
+- aisha_patel_portrait.jpg (150x150px profile photo)
+- james_thompson_portrait.jpg (150x150px profile photo)
+
+🎯 PORTFOLIO SAMPLES:
+- wedding_sunset_ceremony.jpg (1200x800px hero image)
+- corporate_conference.jpg (1200x800px hero image)
+- luxury_product_showcase.jpg (1200x800px hero image)
+- artistic_portrait_session.jpg (1200x800px hero image)
+- traditional_indian_wedding.jpg (1200x800px hero image)
+- nature_lifestyle_session.jpg (1200x800px hero image)
+
+📱 CATEGORY IMAGES:
+- wedding_category.jpg (500x300px)
+- event_category.jpg (500x300px)
+- portrait_category.jpg (500x300px)
+- product_category.jpg (500x300px)
+
+🏢 BRAND ASSETS:
+- logo_capturemoments.svg (scalable vector logo)
+- camera_icon.png (favicon/icon)
+
+NOTES FOR REAL IMPLEMENTATION:
+- All images should be optimized for web (WebP format preferred)
+- Multiple sizes/resolutions for responsive design
+- Alt text should be descriptive and meaningful
+- Consider lazy loading for performance
+- Images should be properly licensed for commercial use
+
+The current prototype uses Unsplash images via CDN for demonstration purposes.
+These would be replaced with actual photographer portfolios and professional branding in production.

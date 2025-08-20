@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - TimelessFrames</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📸</text></svg>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                📸 TimelessFrames
+            </a>
+            
+            <!-- Desktop Search Bar -->
+            <div class="search-container d-none d-lg-flex">
+                <input type="search" class="form-control" placeholder="Search photographers, styles...">
+                <button type="button" class="btn">🔍</button>
+            </div>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="vendor_gallery.html">Browse Studios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="vendor_management.html">Join as Photographer</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb Navigation -->
+    <section class="container mt-3">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html" class="text-primary-gold">Home</a></li>
+                <li class="breadcrumb-item"><a href="vendor_gallery.html" class="text-primary-gold">Browse Studios</a></li>
+                <li class="breadcrumb-item"><a href="item_details.html" class="text-primary-gold">Sarita PandeyPhotography</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Checkout</li>
+            </ol>
+        </nav>
+    </section>
+
+    <!-- Page Header -->
+    <section class="container">
+        <div class="page-header">
+            <h1>Complete Your Booking</h1>
+            <p>Review your session details and confirm your photography booking</p>
+        </div>
+    </section>
+
+    <!-- Checkout Progress Indicator -->
+    <section class="container mb-5">
+        <div class="progress-indicator">
+            <div class="progress-step">
+                <div class="progress-step-number">1</div>
+                <div class="progress-step-label">Browse</div>
+            </div>
+            <div class="progress-step">
+                <span class="progress-connector"></span>
+                <div class="progress-step-number">2</div>
+                <div class="progress-step-label">Select</div>
+            </div>
+            <div class="progress-step">
+                <span class="progress-connector"></span>
+                <div class="progress-step-number">3</div>
+                <div class="progress-step-label">Book</div>
+            </div>
+            <div class="progress-step active">
+                <span class="progress-connector"></span>
+                <div class="progress-step-number">4</div>
+                <div class="progress-step-label">Payment</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Checkout Content -->
+    <div class="container mb-5">
+        <div class="row g-4">
+            <!-- Left Column - Customer Details Form -->
+            <div class="col-lg-8">
+                <form class="custom-form bg-white p-4 p-md-5 rounded-3 shadow-custom">
+                    <h3 class="text-primary-gold mb-4">Customer Information</h3>
+                    
+                    <!-- Personal Details -->
+                    <div class="row mb-4">
+                        <div class="col-md-6 mb-3">
+                            <label for="firstName" class="form-label">First Name *</label>
+                            <input type="text" class="form-control" id="firstName" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="lastName" class="form-label">Last Name *</label>
+                            <input type="text" class="form-control" id="lastName" required>
+                        </div>
+                    </div>
+
+                    <div class="row mb-4">
+                        <div class="col-md-6 mb-3">
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input type="email" class="form-control" id="email" required>
+                            <div class="form-text">We'll send booking confirmation and updates to this email</div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="phone" class="form-label">Phone Number *</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                            <div class="form-text">For booking coordination and day-of communication</div>
+                        </div>
+                    </div>
+
+                    <!-- Event Details -->
+                    <h4 class="text-accent-teal mb-3 mt-5">Event Details</h4>
+                    
+                    <div class="row mb-4">
+                        <div class="col-md-6 mb-3">
+                            <label for="eventType" class="form-label">Event Type</label>
+                            <input type="text" class="form-control" id="eventType" value="Wedding Photography" readonly>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="eventDate" class="form-label">Event Date</label>
+                            <input type="date" class="form-control" id="eventDate" value="2025-09-15" readonly>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="eventLocation" class="form-label">Event Location *</label>
+                        <input type="text" class="form-control" id="eventLocation" 
+                               placeholder="Full address or venue name" required>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="specialInstructions" class="form-label">Special Instructions</label>
+                        <textarea class="form-control" id="specialInstructions" rows="3"
+                                  placeholder="Any special requests, important family members to photograph, timeline details, etc."></textarea>
+                    </div>
+
+                    <!-- Payment Information -->
+                    <h4 class="text-accent-teal mb-3 mt-5">Payment Information</h4>
+                    
+                    <div class="mb-4">
+                        <label for="cardholderName" class="form-label">Cardholder Name *</label>
+                        <input type="text" class="form-control" id="cardholderName" required>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="cardNumber" class="form-label">Card Number *</label>
+                        <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 9012 3456" required>
+                    </div>
+
+                    <div class="row mb-4">
+                        <div class="col-md-4 mb-3">
+                            <label for="expMonth" class="form-label">Exp. Month *</label>
+                            <select class="form-select" id="expMonth" required>
+                                <option value="">Month</option>
+                                <option value="01">01 - January</option>
+                                <option value="02">02 - February</option>
+                                <option value="03">03 - March</option>
+                                <option value="04">04 - April</option>
+                                <option value="05">05 - May</option>
+                                <option value="06">06 - June</option>
+                                <option value="07">07 - July</option>
+                                <option value="08">08 - August</option>
+                                <option value="09">09 - September</option>
+                                <option value="10">10 - October</option>
+                                <option value="11">11 - November</option>
+                                <option value="12">12 - December</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="expYear" class="form-label">Exp. Year *</label>
+                            <select class="form-select" id="expYear" required>
+                                <option value="">Year</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
+                                <option value="2028">2028</option>
+                                <option value="2029">2029</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="cvv" class="form-label">CVV *</label>
+                            <input type="text" class="form-control" id="cvv" placeholder="123" maxlength="4" required>
+                        </div>
+                    </div>
+
+                    <!-- Billing Address -->
+                    <h5 class="text-deep-charcoal mb-3 mt-4">Billing Address</h5>
+                    
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="billingAddress" placeholder="Street Address *" required>
+                    </div>
+
+                    <div class="row mb-4">
+                        <div class="col-md-6 mb-3">
+                            <input type="text" class="form-control" id="billingCity" placeholder="City *" required>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <select class="form-select" id="billingState" required>
+                                <option value="">State</option>
+                                <option value="NSW">New South Wales</option>
+                                <option value="VIC">Victoria</option>
+                                <option value="QLD">Queensland</option>
+                                <option value="WA">Western Australia</option>
+                                <option value="SA">South Australia</option>
+                                <option value="TAS">Tasmania</option>
+                                <option value="SYD">Sydney</option>
+                                <option value="NT">Northern Territory</option>
+                                <!-- Add more states as needed -->
+                            </select>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <input type="text" class="form-control" id="billingZip" placeholder="ZIP Code *" required>
+                        </div>
+                    </div>
+
+                    <!-- Terms and Conditions -->
+                    <div class="mb-4">
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="terms" required>
+                            <label class="form-check-label" for="terms">
+                                I agree to the <a href="#" class="text-primary-gold">Terms of Service</a> and 
+                                <a href="#" class="text-primary-gold">Photography Contract</a> *
+                            </label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="cancellation" required>
+                            <label class="form-check-label" for="cancellation">
+                                I understand the <a href="#" class="text-primary-gold">Cancellation Policy</a> *
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="marketing">
+                            <label class="form-check-label" for="marketing">
+                                Send me updates about special offers and photography tips
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary-custom btn-lg">
+                            Confirm Booking
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Right Column - Booking Summary -->
+            <div class="col-lg-4">
+                <!-- Booking Summary Card -->
+                <div class="booking-summary">
+                    <h4 class="text-deep-charcoal mb-4">Booking Summary</h4>
+                    
+                    <!-- Photographer Info -->
+                    <div class="d-flex align-items-center mb-4 p-3 bg-light rounded">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616c94d1ca2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
+                             alt="Sarita Pandey " class="photographer-avatar me-3">
+                        <div>
+                            <h6 class="mb-1">Sarita Pandey </h6>
+                            <p class="text-muted small mb-1">Wedding & Portrait Specialist</p>
+                            <div class="rating">⭐⭐⭐⭐⭐ <small>(127 reviews)</small></div>
+                        </div>
+                    </div>
+
+                    <!-- Booking Items -->
+                    <div class="booking-item">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <h6 class="mb-1">Premium Wedding Package</h6>
+                                <p class="text-muted small mb-1">4 hours coverage</p>
+                                <p class="text-muted small mb-0">Date: September 15, 2025</p>
+                                <p class="text-muted small mb-0">Time: Golden Hour (4:00 PM - 8:00 PM)</p>
+                            </div>
+                            <div class="text-end">
+                                <p class="fw-bold mb-0">$600</p>
+                                <button class="btn btn-link btn-sm p-0 text-accent-teal">Edit</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Services -->
+                    <div class="border-top pt-3 mb-3">
+                        <h6 class="text-accent-teal mb-3">Add Extra Services</h6>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="extraHour" value="150" checked>
+                            <label class="form-check-label" for="extraHour">
+                                <span class="d-flex justify-content-between w-100">
+                                    <span>Extra Hour Coverage</span>
+                                    <span class="text-muted">+$150</span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="engagement" value="200">
+                            <label class="form-check-label" for="engagement">
+                                <span class="d-flex justify-content-between w-100">
+                                    <span>Engagement Session</span>
+                                    <span class="text-muted">+$200</span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="prints" value="75">
+                            <label class="form-check-label" for="prints">
+                                <span class="d-flex justify-content-between w-100">
+                                    <span>Print Package (20 prints)</span>
+                                    <span class="text-muted">+$75</span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Price Breakdown -->
+                    <div class="border-top pt-3 mb-3">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="text-muted">Session Fee:</span>
+                            <span>$600.00</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="text-muted">Additional Services:</span>
+                            <span>$150.00</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="text-muted">Platform Fee:</span>
+                            <span>$25.00</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="text-muted">Tax:</span>
+                            <span>$50.00</span>
+                        </div>
+                    </div>
+
+                    <!-- Total Price -->
+                    <div class="total-price">
+                        Total: $825.00
+                    </div>
+
+                    <!-- Booking Actions -->
+                    <div class="mt-4">
+                        <div class="text-center">
+                            <a href="item_details.html" class="btn btn-outline-custom w-100">← Back to Portfolio</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Security Info -->
+                <div class="info-card">
+                    <h6>🔒 Secure Booking</h6>
+                    <ul class="list-unstyled text-muted small mb-0">
+                        <li class="mb-2">✓ 256-bit SSL encryption</li>
+                        <li class="mb-2">✓ Secure payment processing</li>
+                        <li class="mb-2">✓ Money-back guarantee</li>
+                        <li class="mb-2">✓ Photographer verification</li>
+                        <li class="mb-0">✓ 24/7 customer support</li>
+                    </ul>
+                </div>
+
+                <!-- Booking Policy -->
+                <div class="info-card">
+                    <h6>📋 Booking Policy</h6>
+                    <ul class="list-unstyled text-muted small mb-0">
+                        <li class="mb-2"><strong>Deposit:</strong> 50% due at booking</li>
+                        <li class="mb-2"><strong>Balance:</strong> Due 48 hours before event</li>
+                        <li class="mb-2"><strong>Cancellation:</strong> Full refund if cancelled 30+ days prior</li>
+                        <li class="mb-0"><strong>Rescheduling:</strong> Free within 14 days of booking</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 TimelessFrames. Blending creativity with professionalism, crafted with passion for those who truly love photography.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
